@@ -145,7 +145,7 @@ Transform:
   m_GameObject: {fileID: 187845555}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 449.4, y: 0, z: 134}
+  m_LocalPosition: {x: 449.4, y: 0, z: 141.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -262,7 +262,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: -0.033124544, y: 0.70633054, z: -0.03312455, w: -0.70633054}
-  m_LocalPosition: {x: 53.6, y: 29.6, z: 0}
+  m_LocalPosition: {x: 54.9, y: 15.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -594,6 +594,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 749834220}
+  - component: {fileID: 749834221}
+  - component: {fileID: 749834222}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -617,6 +619,54 @@ Transform:
   - {fileID: 1415281555}
   m_Father: {fileID: 187845556}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &749834221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749834219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f744c333ae3dc014b8f1102892ffcc8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  controlSpeed: 10
+  xClampRange: 16
+  yClampRange: 16
+  controlPitchFactor: 20
+  controlRollFactor: 20
+  rotationSpeed: 10
+--- !u!114 &749834222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749834219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: 5cad66172c4a85c4993e44bf76e8dbab, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: e9dac21f-6edb-4014-b008-da166823c114
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &808990997
 GameObject:
   m_ObjectHideFlags: 0
