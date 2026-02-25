@@ -5,19 +5,17 @@ using UnityEngine.InputSystem;
 public class PlayerWeapon : MonoBehaviour
 {
 
-    [SerializeField] ParticleSystem laser;
+    [SerializeField] GameObject[] lasers;
 
     bool isFiring = false;
-    ParticleSystem.EmissionModule emission;
-
-    void Start()
-    {
-        emission = laser.emission;
-    }
 
     void Update()
     {
-        emission.enabled = isFiring;
+        foreach (var laser in lasers)
+        {
+            var emission = laser.GetComponent<ParticleSystem>().emission;
+            emission.enabled = isFiring;
+        }
     }
 
     public void OnFire(InputValue value)
